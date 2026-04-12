@@ -9,7 +9,7 @@ const Navbar = () => {
             <li className='navlink'><NavLink className="border border-transparent font-semibold" to="/pages-to-read">Pages to Read</NavLink></li>
         </>
     return (
-        <div className="navbar max-w-11/12 mx-auto w-full my-5 md:my-12">
+        <div className="navbar max-w-11/12 mx-auto w-full my-5">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
