@@ -16,7 +16,7 @@ const Book = ({book}) => {
                 <div className="card-body">
                     <div className='flex items-center gap-2'>
                         {
-                            tags.map((tag, idx) => <span key={idx} className='inline-block px-2 py-1 rounded-xl bg-green-100 text-green-600'>{tag}</span>
+                            tags?.map((tag, idx) => <span key={idx} className='inline-block px-2 py-1 rounded-xl bg-green-100 text-green-600'>{tag}</span>
                             )
                         }
                     </div>

@@ -29,7 +29,7 @@ const BookDetails = () => {
                 <div className='flex items-center gap-5'>
                     <span className='font-bold text-[#131313]'>Tag:</span>
                     {
-                        tags.map((tag, idx)=> <span key={idx} className='px-2 py-1 bg-[#23BE0A]/5 text-[#23BE0A] rounded-xl'>#{tag}</span>)
+                        tags?.map((tag, idx)=> <span key={idx} className='px-2 py-1 bg-[#23BE0A]/5 text-[#23BE0A] rounded-xl'>#{tag}</span>)
                     }
                 </div>
                 <div className='space-y-3'>

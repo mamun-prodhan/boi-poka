@@ -14,7 +14,7 @@ const ListTabs = ({readList, wishList}) => {
         <TabPanel>
             <div className='grid grid-cols-1 gap-6 mt-6'>
                 {
-                    readList.map((list, idx) => <ListCard list={list} key={idx}/>)
+                    readList?.map((list, idx) => <ListCard list={list} key={idx}/>)
                 }
             </div>
         </TabPanel>
@@ -22,7 +22,7 @@ const ListTabs = ({readList, wishList}) => {
         <TabPanel>
             <div className='grid grid-cols-1 gap-6 mt-6'>
                 {
-                    wishList.map((list, idx) => <ListCard list={list} key={idx}/>)
+                    wishList?.map((list, idx) => <ListCard list={list} key={idx}/>)
                 }
             </div>
         </TabPanel>

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import ListTabs from '../../components/ListTabs/ListTabs';
 import { getFromLocalStorage } from '../../utility/localStorage';
 import { useLoaderData } from 'react-router';
@@ -9,13 +9,13 @@ const ListedBooks = () => {
 
     const readList = useMemo(()=>{
         const readIds = getFromLocalStorage('readList');
-        const convertedReadIds = readIds.map(id => parseInt(id));
+        const convertedReadIds = readIds?.map(id => parseInt(id));
         return allBooks.filter(book => convertedReadIds.includes(book.bookId))
     },[allBooks])
 
     const wishList = useMemo(()=>{
         const wishIds = getFromLocalStorage('wishList');
-        const convertedWishIds = wishIds.map(id => parseInt(id));
+        const convertedWishIds = wishIds?.map(id => parseInt(id));
         return allBooks.filter(book => convertedWishIds.includes(book.bookId));
     },[allBooks]);
 
@@ -45,7 +45,6 @@ const ListedBooks = () => {
 
 
 
-
     
 
     return (
@@ -62,6 +61,10 @@ const ListedBooks = () => {
                     </ul>
                 </details>
             </div>
+
+            {
+                sortedReadList.length
+            }
 
             <ListTabs readList={sortedReadList} wishList={sortedWishList}></ListTabs>
         </div>
