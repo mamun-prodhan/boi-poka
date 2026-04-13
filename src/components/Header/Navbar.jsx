@@ -6,7 +6,6 @@ const Navbar = () => {
     const links = <>
             <li className='navlink'><NavLink className="border border-transparent font-semibold" to="/">Home</NavLink></li>
             <li className='navlink'><NavLink className="border border-transparent font-semibold" to="/listed-books">Listed Books</NavLink></li>
-            <li className='navlink'><NavLink className="border border-transparent font-semibold" to="/pages-to-read">Pages to Read</NavLink></li>
         </>
     return (
         <div className="navbar max-w-11/12 mx-auto w-full my-5">
